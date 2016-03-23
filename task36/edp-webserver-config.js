@@ -5,7 +5,7 @@
 
 /* globals home, redirect, content, empty, autocss, file, less, stylus, proxyNoneExists */
 
-exports.port = 8890; // @St. 2016-02-14
+exports.port = 9000; // @St. 2016-03-23-13.13
 exports.directoryIndexes = true;
 exports.documentRoot = __dirname;
 exports.getLocations = function () {

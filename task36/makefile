@@ -5,7 +5,7 @@
 
 .PHONY: server
 server:
-	browser-sync start --server --files='index.html, static/xxjxsArea.filp.css'
+	browser-sync start --server --files='index.html, static/task36.css, static/task36.js'
 
 # .PHONY: clean
 # clean:
