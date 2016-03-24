@@ -12,8 +12,7 @@
     <!-- intro -->
     <h2>IFE JavaScript Task 14</h2>
     <h1><a href="http://ife.baidu.com/task/detail?taskId=14">任务十四：零基础JavaScript编码（二）</a></h1>
-    <p>demo: <a href="http://codepen.io/superwoods/pen/KzmNeO">CodePen demo task14</a></p>
-    <p>@St. 2016-03-23</p>
+    <p>@St. 2016-03-24</p>
     <hr>
     <!-- html -->
     <h3>污染城市列表</h3>
@@ -40,58 +39,6 @@
             遍历读取aqiData中各个城市的数据
             将空气质量指数大于60的城市显示到aqi-list的列表中
             */
-
-            // 模拟一个简单的jQuery id选择器函数(from: task13)
-            function $(tag) {
-                //console.log(tag.indexOf('#'));
-                if (tag && tag.indexOf('#') > -1) {
-                    tag = tag.replace('#', '');
-                    return document.getElementById(tag);
-                }
-            }
-            // 数组排序，sort方法可以将原数组直接排序，并不生成新的数组。
-            aqiData.sort(function(a, b) {
-                return b[1] - a[1];  // 因为排序的是一个二维数组的内部元素，这里必须用 b[1]、a[1]
-            });
-            // 判断 >60的输出
-            var virtualDom = '';
-            for (var i = 0, j = aqiData.length; i < j; i++) {
-                if (aqiData[i][1] > 60) {
-                    virtualDom += ' <li>第' + zh_cn_Num(i) + '名：' + aqiData[i][0] + '，' + aqiData[i][1] + '</li>';
-                }
-            }
-
-            // 输出中文的序号，这个模块还有问题，也不是很好，需要修改
-            function zh_cn_Num(i) {
-                var text;
-                if (i === 0) {
-                    text = '一';
-                } else if (i === 1) {
-                    text = '二';
-                } else if (i === 2) {
-                    text = '三';
-                } else if (i === 3) {
-                    text = '四';
-                } else if (i === 4) {
-                    text = '五';
-                } else if (i === 5) {
-                    text = '六';
-                } else if (i === 6) {
-                    text = '七';
-                } else if (i === 7) {
-                    text = '八';
-                } else if (i === 8) {
-                    text = '九';
-                } else if (i === 9) {
-                    text = '十';
-                } else {
-                    text = i;
-                }
-                return text;
-            }
-
-            // 输入内容到页面中
-            $('#aqi-list').innerHTML = virtualDom;
         })();
     </script>
 </body>
